@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com link</title>
+</head>
+<body>
+    <h1>Usando links externos</h1>
+    <p> Você pode acessar <a href="https://github.com/LFelipe1988" target="_blank" rel="external">o meu repositório público no GiTHub</a></p> <!--Para fazer refêrencia a um site devemos usar a tag [A] e anexar o link, para não fechar o site quando clicamos em um link usa-se a tag [Target="_blank"] e para refênciar que é algo externo [REL="external"]-->
+    <p>Você pode também escutar as músicas que gosto <a href="https://www.youtube.com/watch?v=2pTAQqC0YOw&ab_channel=IWannaBeCat" target="_blank" rel="external">aqui</a></p><!--Também devemos usar o [REL="_SELF"] para refêrenciar páginas internas-->
+    <h1>Usando links internos</h1>
+    <p>Esta é a primeira página do site. Se você quiser, pode acessar também a minha <a href="pag002.html" target="next" rel="_self">segunda página</a></p><!-- Usa-se [TARGET="NEXT"] para identificar o avanço dentro do própio site -->
+    <h1>Página de notícias</h1>
+    <p>Você também pode acessar a nossa <a href="noticias/pag003.html" rel="_self">página de notícias</a></p>
+    <h1>Links para dowload</h1>
+    <ul>
+        <li><a href="Livros/Desbloqueie o Potencial do Seu Cérebro.pdf"target="_blank" download="Livros/Desbloqueie o Potencial do Seu Cérebro.pdf" type="application/pdf">Desbloqueie o Potencial do Seu Cérebro em PDF</a></li> <!--Usa-se as tags [DOWLOAD] para fazer dowload de arquivo, [TYPE="APPLICATION/PDF OU ZIP"] para mostrar a ação que iremos fazer-->
+        <li><a href="Livros/Desbloqueie o Potencial do Seu Cérebro.zip" download="Livros/Desbloqueie o Potencial do Seu Cérebro.zip" type="application/zip">Desbloqueie o Potencial do Seu Cérebro em ZIP</a></li>
+        
+
+    </ul>
+</body>
+</html>

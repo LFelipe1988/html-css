@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor.</p>
+    <video controls width="560" height="315" poster="midia/Imagens/girl-religions.png">
+        <source src="midia/Video/girlreligions.mp4" type="video/mp4">
+        <source src="midia/Video/girlreligions.ogv" type="video/ogv">
+        <source src="midia/Video/girlreligions.webm" type="video/webm">
+        
+    </video>
+    <!-- Usa-se a tag [WIDTH],[HEIGHT] para diminuir ou aumentar exibição, a [POSTER] para colocar uma imagem no inicio do video, e usaremos aque mesmo recurso para o navegador ter um ordem de prioridade para abrir os videos , levando em consideração o tamanho para economizar banda do servidor. -->
+    <p>Seu navegador não tem compatibilidade com recurso de vídeo, <a href="midia/Video/girlreligions.mp4" target="_blank">clique aqui para baixar</a></p>
+    <h1>Inserindo vídeos do YouTube</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/nt9WCnEMdos?si=qll0fI5Aq4ghX1r3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>

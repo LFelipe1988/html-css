@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <picture>
+        <source media="(max-width:750px )" srcset="imagens/foto-p.png">
+        <source media="(max-width:1050px )" srcset="imagens/foto-m.png">
+        <img src="Imagens/foto-g.png" alt="Imagem Flexível">
+    </picture>
+    <!--Usamos a tag[PICTURE] para carregar uma imagem direto (no exemplo estamos usando background) usamos a tag [SOURCE MEDIA] para escolher qual a melhor imagem para ficar no background de um dispositivo, melhorando para o usuario sua experiência. Obs: colocamos o tamanho da imagem mais 50px, e existe uma ordem usar primeiro a imagem menor depois a maior. -->
+    <h1>Reproduzindo Áudio</h1>
+    <!--<p>Vamos aprender a reproduzir áudio em HTML5</p>
+    <audio src="midia/podcast cafe codigo e kant.MP3" controls></audio>
+    [MP3, WAV, OGG]-->
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midia/podcast cafe codigo e kant.MP3" type="audio/mpeg">
+        <source src="midia/podcast cafe codigo e kant.ogg" type="audio/ogg">
+        <source src="midia/podcast cafe codigo e kant.wav" type="audio/wav">
+        <!--[Source src=] é para áudio-->
+    </audio>
+    <!--Podemos usar está segunda forma de reproduzir audio usando as tags [AUDIO PRELOAD = "METADATA" AUTOPLAY (reproduzir automatico) CONTROLS (tendo os controles visiveis) LOOP (voltando e reniciando quando terminar).]-->
+    <p>Infelizmente seu navegador não consegue reproduzir áudio.
+        <a href="midia/podcast cafe codigo e kant.MP3">Clique aqui para baixar o arquivo</a>
+    </p>
+</body>
+</html>
