@@ -1,0 +1,27 @@
+@charset "UTF-8"
+* {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-image: linear-gradient(90deg,#44FFD2,#DAF5FF);
+}
+main {
+    background-color: rgba(255, 255, 255, 0.56);
+    border-radius:10px; /* Para criar as bordas de uma caixa*/
+    box-shadow: 5px 5px 15px rgba(68, 55, 55, 0.56); /* sombra da caixa, primeiro parametro é quanto a sombra vai andar para o [lado, para baixo e quanto a sombra vai espalhar */
+    width:800px; /* largura */
+    padding:10px; /* espaçamento interno de um elemento, ou seja, a distância entre o conteúdo do elemento e suas bordas */
+    margin: auto; /* normalmente fica centralizado */
+}
+h1 {
+    color:#FFBFA0;
+    text-align: center;
+    text-shadow: 1px 1px 2px #886656;
+}
+h2 {
+    color: #7A8450;
+}
+p {
+    text-align: justify;
+}
