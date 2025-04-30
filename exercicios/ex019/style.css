@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* em HTML é id = em CSS é # */
+/* em HTML é CLASS = em CSS é . 
+Em um documentos podemos usar apenas um [ID], agora podemos classificar com a tag [class] para fazer parecido.
+*/
+body{
+    background-color: aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    color: rgb(49, 20, 191);
+}
+h1#principal {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: blueviolet;
+}
+h2 {
+    color: blue;
+}
+.basico {
+    color: rgb(102, 80, 226);
+
+}
+.intermediario {
+    color: rgb(165, 171, 16);
+
+}
+.avancado {
+    color: rgb(233, 97, 97);
+
+}
+.destaque {
+    background-color: rgba(220, 240, 130, 0.753);
+}
