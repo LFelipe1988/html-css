@@ -1,8 +1,8 @@
-@charset "UTF-8"
+@charset "UTF-8";
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font: normal 20px Arial, Verdana, serif;
+    text-align: left;
 }
 /* Medidas Absolutas
 cm, mm, in (polegadas), px (usar), pt, pc 
@@ -21,4 +21,14 @@ h1, h2 {
     font-style , font-weight, font-size, font-family */
 
     font: italic bolder 20px 'Times New Roman', sans-serif;
+}
+h1 {
+    text-align: center;
+}
+h2{
+    text-align: right;
+}
+p {
+    text-align:justify ;
+    text-indent: 30px;
 }
