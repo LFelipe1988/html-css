@@ -8,17 +8,40 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
+        a::before {
+            content:'☠';
+        }
+        /* Usa-se a tag [a::before] para colocar antes do conteúdo algo [content] significa conteúdo */
+        
+        a::after {
+            content:'☠';
+        }
+        /* Usa-se a tag [a::after] para colocar depois do conteúdo algo [content] significa conteúdo */
+        a {
+            color: blueviolet;
+            text-decoration: none;
+            font-weight: normal;
+        }
+        /* aqui em cima estamos mudando a cor, sem decoração e sem negrito no caso. */
+        a:hover {
+            color: rgb(179, 144, 213);
+            text-decoration: underline;
+
+        }
+        /* Usa-se a tag [a:houver] usamos para quando passarmos o cursor em cima fazer alguma ação, no caso do exemplo, mudar de cor e ter uma linha */
+        a:active {
+            color: aquamarine;
+        }
+        /* Usa-se a tag [a:active] para quando clicamos em um link ele fazer alguma ação, no caso do exemplo mudar a cor. */
 
     </style>
 </head>
 <body>
     <h1>Links Personalizados</h1>
     <ul>
-        <a href="https://github.com/LFelipe1988"><li>Repositório GitHub</li>
-        </a>
-        <a href="https://www.linkedin.com/in/rnluisfelipe/"><li>Linkedin</li>
-        </a>
-        <li>Instagram</li>
+        <li><a href="https://github.com/LFelipe1988" target="_blank">Repositório GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/rnluisfelipe/" target="_blank">Linkedin</a></li>
+        <li><a href="https://www.instagram.com/luisfelipe8982/?utm_source=qr&igsh=ZnE0Y3hlZGVwZnFr#" target="_blank">Instagram</a></li>
     </ul>
     
 </body>
