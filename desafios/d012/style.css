@@ -1,4 +1,11 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+:root {
+    --fonte1:Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2:'Bebas Neue', sans-serif;
+    --fonte3:'Bad Script', cursive;
+}
 * {
     margin: 0px;
     padding: 0px;
@@ -6,7 +13,9 @@
 html, body {
     min-height: 100vh;
     background-color:lightgray;
+    font-family: var(--fonte1);
 }
+
 header {
     background-color: black;
     text-align: center;
@@ -15,6 +24,8 @@ h1 {
     color: white;
     padding-top: 50px;
     font-variant: small-caps;
+    font-family: var(--fonte2);
+    font-size: 5em;
 }
 header > p {
     color: white;
@@ -34,7 +45,13 @@ section {
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 2.0em;
 
+
+}
+section > p {
+    padding-bottom: 2em;
 }
 
 section.normal {
@@ -45,9 +62,28 @@ section.normal {
 section.imagem {
     background-color: black;
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.729);
+    background-attachment: fixed;
 }
+section.imagem > p {
+    display: inline-block;
+    background-color: rgba(8, 8, 8, 0.347);
+    border-radius: 20px;
+    padding: 10px;
+    text-shadow: 1px 1px 0px black;
+
+}
+section#img01 {
+    background-image: url(imagens/background001.jpg);
+    background-size: cover;
+}
+section#img02 {
+    background-image: url(imagens/background002.jpg);
+    background-size: cover;
+}
+
 footer {
-    background-color: black;
+    background-color: rgb(15, 14, 14);
     color: white;
     text-align: center;
     padding: 10px;
