@@ -11,10 +11,34 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+            /* Para fazer a o cabeçalho rolar junto temos que fazer 
+            1ª table {position: relative;}
+            2º thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color:rgb(87, 85, 85) ;
+             */
         }
+        thead > tr > th {
+            position: sticky;
+            top: 0%;
+            background-color:rgb(87, 85, 85) ;
+        }
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
+        }
+        /* tr:nth-child(2n), usamos para fazer o efeito de zebramento, podemos usar dentro {odd} impar, {even} par. */
         td, th {
             border: 1px solid black;
             padding: 10px;
+        }
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+
         }
         td.num {
             text-align: right;
@@ -25,7 +49,7 @@
             padding-right: 5px;
         }
         th {
-            background-color: lightgrey;
+            background-color: rgb(87, 85, 85);
         }
     </style>
 </head>
@@ -33,18 +57,20 @@
     <h1>Uso de tabelas grandes</h1>
     <!-- ANATOMIA PARA TABELAS GRANDES
      TABLE
-     THEAD
+        CAPTION
+        THEAD
         TR, TD, TH
-    TBODY
+        TBODY
         TR, TD, TH
-    TFOOT
+        TFOOT
         TR, TD, TH -->
     <table>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
+            <!-- {Scoope="col"} estamos falando que o dados que viram seguem de cima para baixo -->
         </thead>
         <tbody>
             <tr>
@@ -52,121 +78,125 @@
                 <td class="num">45.973.194</td>
             </tr>
             <tr>
-                <td>Minas Gerais</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Bandeira_de_Minas_Gerais.svg/60px-Bandeira_de_Minas_Gerais.svg.png" alt="minas gerais">Minas Gerais</img></td>
                 <td class="num">21.322.691</td>
             </tr>
             <tr>
-                <td>Rio de Janeiro</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Bandeira_do_estado_do_Rio_de_Janeiro.svg/60px-Bandeira_do_estado_do_Rio_de_Janeiro.svg.png" alt="Rio de Janeiro">Rio de Janeiro</img></td>
                 <td class="num">17.219.679</td>
             </tr>
             <tr>
-                <td>Bahia</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Bandeira_da_Bahia.svg/60px-Bandeira_da_Bahia.svg.png" alt="Bahia">Bahia</img></td>
                 <td class="num">14.850.513</td>
             </tr>
             <tr>
-                <td>Paraná</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Bandeira_do_Paran%C3%A1.svg/60px-Bandeira_do_Paran%C3%A1.svg.png" alt="Paraná">Paraná</img></td>
                 <td class="num">11.824.665</td>
             </tr>
             <tr>
-                <td> Rio Grande do Sul</td>
+                <td> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Bandeira_do_Rio_Grande_do_Sul.svg/60px-Bandeira_do_Rio_Grande_do_Sul.svg.png
+                " alt="Rio Grande do Sul">Rio Grande do Sul</img></td>
                 <td class="num">11.229.915</td>
             </tr>
             <tr>
-                <td>Pernambuco</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Bandeira_de_Pernambuco.svg/60px-Bandeira_de_Pernambuco.svg.png" alt="Pernambuco">Pernambuco</img></td>
                 <td class="num">9.539.029</td>
             </tr>
             <tr>
-                <td>Ceará</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bandeira_do_Cear%C3%A1.svg/60px-Bandeira_do_Cear%C3%A1.svg.png" alt="Ceará">Ceará</img></td>
                 <td class="num">9.233.656</td>
             </tr>
             <tr>
-                <td>Pará</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Bandeira_do_Par%C3%A1.svg/60px-Bandeira_do_Par%C3%A1.svg.png" alt="Pará">Pará</img></td>
                 <td class="num">8.664.306</td>
             </tr>
             <tr>
-                <td>Santa Catarina</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Bandeira_de_Santa_Catarina.svg/60px-Bandeira_de_Santa_Catarina.svg.png" alt="Santa Catarina">Santa Catarina</img></td>
                 <td class="num">8.058.441</td>
             </tr>
             <tr>
-                <td>Goiás</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Flag_of_Goi%C3%A1s.svg/60px-Flag_of_Goi%C3%A1s.svg.png" alt="Goiás">Goiás</img></td>
                 <td class="num">7.350.483</td>
             </tr>
             <tr>
-                <td>Maranhão</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Bandeira_do_Maranh%C3%A3o.svg/60px-Bandeira_do_Maranh%C3%A3o.svg.png" alt="Maranhão">Maranhão</img></td>
                 <td class="num">7.010.960</td>
             </tr>
             <tr>
-                <td>Amazonas</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Bandeira_do_Amazonas.svg/60px-Bandeira_do_Amazonas.svg.png" alt="Amazonas">Amazonas</img></td>
                 <td class="num">4.281.209</td>
         
             </tr>
             <tr>
-                <td>Paraíba</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bandeira_da_Para%C3%ADba.svg/60px-Bandeira_da_Para%C3%ADba.svg.png" alt="Paraíba">Paraíba</img></td>
                 <td class="num">4.145.040</td>
             </tr>
             <tr>
-                <td>Espírito Santo</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Bandeira_do_Esp%C3%ADrito_Santo.svg/60px-Bandeira_do_Esp%C3%ADrito_Santo.svg.png" alt="Espírito Santo">Espírito Santo</img></td>
                 <td class="num">4.102.129</td>
             </tr>
             <tr>
-                <td>Mato Grosso</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Bandeira_de_Mato_Grosso.svg/60px-Bandeira_de_Mato_Grosso.svg.png" alt="Mato Grosso">Mato Grosso</img></td>
                 <td class="num">3.836.399</td>
             </tr>
             <tr>
-                <td> Rio Grande do Norte</td>
+                <td> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Bandeira_do_Rio_Grande_do_Norte.svg/60px-Bandeira_do_Rio_Grande_do_Norte.svg.png" alt="Rio Grande do Norte">Rio Grande do Norte</img></td>
                 <td class="num">3.446.071</td>
             </tr>
             <tr>
-                <td>Piauí</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Bandeira_do_Piau%C3%AD.svg/60px-Bandeira_do_Piau%C3%AD.svg.png" alt="Piauí">Piauí</img></td>
                 <td class="num">3.375.646</td>
             </tr>
             <tr>
-                <td>Alagoas</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Bandeira_de_Alagoas.svg/60px-Bandeira_de_Alagoas.svg.png" alt="Alagoas">Alagoas</img></td>
                 <td class="num">3.220.104</td>
             </tr>
             <tr>
-                <td>Distrito Federal</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Bandeira_do_Distrito_Federal_%28Brasil%29.svg/60px-Bandeira_do_Distrito_Federal_%28Brasil%29.svg.png" alt="Distrito Federal">Distrito Federal</img></td>
                 <td class="num">2.982.818</td>
             </tr>
             <tr>
-                <td>Mato Grosso do Sul</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Bandeira_de_Mato_Grosso_do_Sul.svg/60px-Bandeira_de_Mato_Grosso_do_Sul.svg.png" alt="Mato Grosso do Sul">Mato Grosso do Sul</img></td>
                 <td class="num">2.901.895</td>
             </tr>
             <tr>
-                <td>Sergipe</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Bandeira_de_Sergipe.svg/60px-Bandeira_de_Sergipe.svg.png" alt="Sergipe">Sergipe</img></td>
                 <td class="num">2.291.077</td>
             </tr>
             <tr>
-                <td>Rondônia</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Bandeira_de_Rond%C3%B4nia.svg/60px-Bandeira_de_Rond%C3%B4nia.svg.png" alt="Rondônia">Rondônia</img></td>
                 <td class="num">1.746.227</td>
             </tr>
             <tr>
-                <td>Tocantins</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Bandeira_do_Tocantins.svg/60px-Bandeira_do_Tocantins.svg.png" alt="Tocantins">Tocantins</img></td>
                 <td class="num">1.577.342</td>
             </tr>
             <tr>
-                <td>Acre</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Bandeira_do_Acre.svg/60px-Bandeira_do_Acre.svg.png" alt="Acre">Acre</img></td>
                 <td class="num">880.631</td>
             </tr>
             <tr>
-                <td>Amapá</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Bandeira_do_Amap%C3%A1.svg/60px-Bandeira_do_Amap%C3%A1.svg.png" alt="Amapá">Amapá</img></td>
                 <td class="num">802.837</td>
             </tr>
             <tr>
-                <td>Roraima</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Bandeira_de_Roraima.svg/60px-Bandeira_de_Roraima.svg.png" alt="Roraima">Roraima</img></td>
                 <td class="num">716.793</td>
             </tr>
 
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes</th>
-                <td class="num"><strong>212.583.750</strong></td>
+                <th scope="row">Total de habitantes</th>
+                <td class="num" style="background-color: yellowgreen;"><strong>212.583.750</strong></td>
+                <!-- {Scope="row"} falamos que os dados seguem a linha -->
             </tr>
 
         </tfoot>
+        <caption>População das Unidades Federativas</caption>
 
     </table>
+  
     
 </body>
 </html>
